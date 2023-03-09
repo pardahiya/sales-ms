@@ -1,0 +1,39 @@
+version: '3.4'
+
+services:
+
+  sqldata:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      - SA_PASSWORD=Pass@w0rd
+      - ACCEPT_EULA=Y
+    ports:
+      - "5433:1433"
+    volumes:
+      - sales-sqldata:/var/opt/mssql
+
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+
+  #sales-api:
+  #  image: ${sales-ms}/sales.api:${PLATFORM:-linux}-${TAG:-latest}
+  #  build:
+  #    context: .
+  #    dockerfile: Sales.API/Dockerfile
+  #  environment:
+  #    - ASPNETCORE_ENVIRONMENT=Development
+  #    - UseCustomizationData=True
+  #    - PORT=80
+  #    - PATH_BASE=/sales-api
+  #  ports:
+  #    - "5101:80"
+  #  depends_on:
+  #    - sqldata
+  #    - rabbitmq
+
+volumes:
+  sales-sqldata:
+    external: false

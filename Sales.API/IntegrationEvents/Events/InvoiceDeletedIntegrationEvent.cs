@@ -1,27 +1,10 @@
-﻿namespace Microsoft.eShopOnContainers.Services.Catalog.API.IntegrationEvents.Events;
+﻿namespace Sales.API.IntegrationEvents.Events;
 
-public record OrderStockRejectedIntegrationEvent : IntegrationEvent
+public record InvoiceDeletedIntegrationEvent : IntegrationEvent
 {
-    public int OrderId { get; }
-
-    public List<ConfirmedOrderStockItem> OrderStockItems { get; }
-
-    public OrderStockRejectedIntegrationEvent(int orderId,
-        List<ConfirmedOrderStockItem> orderStockItems)
+    public Invoice DeletedInvoice { get; }
+    public InvoiceDeletedIntegrationEvent(Invoice invoice)
     {
-        OrderId = orderId;
-        OrderStockItems = orderStockItems;
-    }
-}
-
-public record ConfirmedOrderStockItem
-{
-    public int ProductId { get; }
-    public bool HasStock { get; }
-
-    public ConfirmedOrderStockItem(int productId, bool hasStock)
-    {
-        ProductId = productId;
-        HasStock = hasStock;
+        DeletedInvoice = invoice;
     }
 }

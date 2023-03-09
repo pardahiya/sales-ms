@@ -1,9 +1,21 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 25.0.1704.5
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33424.131
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sales.API", "Sales.API\Sales.API.csproj", "{7BE82870-C0F6-445C-B8EF-05148962AEBC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sales.API", "Sales.API\Sales.API.csproj", "{7BE82870-C0F6-445C-B8EF-05148962AEBC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sales.EventBus", "Sales.EventBus\Sales.EventBus.csproj", "{7015AF40-AEFD-447C-ACCD-8CF80F03D72D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sales.EventBus.RabbitMQ", "Sales.EventBus.RabbitMQ\Sales.EventBus.RabbitMQ.csproj", "{762C951C-EE29-4824-B3CA-0A16E25C63A7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sales.IntegrationEventLogEF", "IntegrationEventLogEF\Sales.IntegrationEventLogEF.csproj", "{8D7A2FED-7B2F-4FD1-8438-AE8DFE8EB2EB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FFF48465-EE06-4AB8-BF6E-0781962B3E5A}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+		NuGet.config = NuGet.config
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +27,18 @@ Global
 		{7BE82870-C0F6-445C-B8EF-05148962AEBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7BE82870-C0F6-445C-B8EF-05148962AEBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7BE82870-C0F6-445C-B8EF-05148962AEBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7015AF40-AEFD-447C-ACCD-8CF80F03D72D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7015AF40-AEFD-447C-ACCD-8CF80F03D72D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7015AF40-AEFD-447C-ACCD-8CF80F03D72D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7015AF40-AEFD-447C-ACCD-8CF80F03D72D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{762C951C-EE29-4824-B3CA-0A16E25C63A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{762C951C-EE29-4824-B3CA-0A16E25C63A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{762C951C-EE29-4824-B3CA-0A16E25C63A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{762C951C-EE29-4824-B3CA-0A16E25C63A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D7A2FED-7B2F-4FD1-8438-AE8DFE8EB2EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D7A2FED-7B2F-4FD1-8438-AE8DFE8EB2EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D7A2FED-7B2F-4FD1-8438-AE8DFE8EB2EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D7A2FED-7B2F-4FD1-8438-AE8DFE8EB2EB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
